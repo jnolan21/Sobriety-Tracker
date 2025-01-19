@@ -1,0 +1,9 @@
+<div class="dashboard">
+    <h1 class="dashboard__heading">Welcome, <%= user.username %>!</h1>
+    <p class="dashboard__subheading">Start you sobriety journey today!</p>
+
+    <!-- Button to set the sobriety start date -->
+    <form action="/dashboard/start" method="POST">
+        <button type="submit" class="btn">Start Sobriety</button>
+    </form>
+</div>
