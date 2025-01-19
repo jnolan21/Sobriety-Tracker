@@ -1,0 +1,31 @@
+<div class="dashboard">
+    <h1 class="dashboard__heading">Welcome, <%= user.username %>!</h1>
+    <p class="dashboard__subheading">Track your sobriety progress below.</p>
+
+    <!-- Sobriety timer -->
+    <div class="sobriety-timer">
+        <h2>You have been sober for...</h2>
+        <p id="years_sober"></p>
+        <p id="months_sober"></p>
+        <p id="days_sober"></p>
+        <p id="hours_sober"></p>
+        <p id="minutes_sober"></p>
+        <p id="seconds_sober"></p>
+    </div>
+
+    <!-- Button to restart the sobriety start date -->
+    <form action="/dashboard/start" method="POST">
+        <button type="submit" class="btn">Restart Sobriety</button>
+    </form>
+
+    <!-- Button to restart the sobriety start date -->
+    <form action="/dashboard/logout" method="POST">
+        <button type="submit" class="btn">Logout</button>
+    </form>
+
+    <script>
+        window.sobrietyStartDate = "<%= sobrietyStartDate %>";
+    </script>
+    <script type="text/javascript" defer src="/js/timer.js"></script>
+
+</div>
