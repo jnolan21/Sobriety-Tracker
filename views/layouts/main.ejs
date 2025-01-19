@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>">
+    <link rel="stylesheet" href="/css/style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <!-- Main content area where dynamic content (e.g., dashboard) will be injected -->
+    <div class="container">
+        <main class="main">
+            <%- body %> <!-- Dynamic content like dashboard will be injected here -->
+        </main>
+    </div>
+
+    <!-- Footer section -->
+    <footer class="footer-container">
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
+</html>
